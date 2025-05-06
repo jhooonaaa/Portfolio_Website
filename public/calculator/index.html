@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Melody Calculator</title>
+    <script src="./js/numbers.js"></script>
+    <script src="./js/operators.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('cute.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .calculator {
+            background: url('pink-gingham.jpg');
+            background-size: cover;
+            padding: 20px;
+            border-radius: 20px;
+            border: 5px solid #d893a3;
+            text-align: center;
+            width: 320px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .display-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        #display, #display2, #operator {
+            width: 260px;
+            height: 40px;
+            font-size: 1.5rem;
+            text-align: right;
+            background: #fffaf3;
+            border: 3px solid #d893a3;
+            border-radius: 10px;
+            margin-bottom: 5px;
+            padding: 5px;
+        }
+
+        #display2 {
+            display: none;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            width: 60px;
+            height: 60px;
+            font-size: 1.5rem;
+            border-radius: 15px;
+            border: 2px solid #d893a3;
+            background-color: #f8c8dc;
+            color: #5a3e36;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #f4a6c0;
+        }
+
+        .heart-button {
+            background-color: #ff85a2;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display-container">
+            <input type="text" id="display" class="display" value="0" readonly>
+            <input type="text" id="display2" class="display" value="" readonly style="display: none;">
+            <input type="text" id="operator" readonly>
+        </div>
+        <div class="buttons">
+            <button type="button" onclick="seven()">7</button>
+        <button type="button" onclick="eight()">8</button>
+        <button type="button" onclick="nine()">9</button>
+        <button type="button" onclick="plus()">+</button>
+        <button type="button" onclick="four()">4</button>
+        <button type="button" onclick="five()">5</button>
+        <button type="button" onclick="six()">6</button>
+        <button type="button" onclick="minus()">-</button>
+        <button type="button" onclick="one()">1</button>
+        <button type="button" onclick="two()">2</button>
+        <button type="button" onclick="three()">3</button>
+        <button type="button" onclick="times()">*</button>
+        <button type="button" onclick="zero()">0</button>
+        <button type="button" onclick="dot()">.</button>
+        <button type="button" onclick="equals()">=</button>
+        <button type="button" onclick="divide()">/</button>
+        </div>
+    </div>
+</body>
+</html>

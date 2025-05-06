@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+
+    <script src="./js/math.js"></script>
+    <style>
+    /* General Styles */
+    body {
+        font-family: 'Playfair Display', serif; /* Elegant serif font */
+        background: url('ok.jpg') no-repeat center center fixed;
+        background-size: cover;
+        text-align: center;
+        padding: 20px;
+        color: #5a3e2b; /* Soft brown text */
+    }
+    
+    /* Container */
+    .container {
+        background: rgba(255, 235, 230, 0.85); /* Soft pink with slight transparency */
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: inline-block;
+        width: 350px;
+        backdrop-filter: blur(10px);
+        margin-top: 300px;
+    }
+    
+    /* Input Field */
+    input {
+        padding: 10px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 16px;
+        border: 2px solid #d2a679; /* Light Brown */
+        border-radius: 8px;
+        outline: none;
+        background-color: #fff5f3; /* Light Pink */
+        color: #5a3e2b; /* Dark Brown */
+        width: 20%;
+        text-align: center;
+        margin-top: 100px;
+    }
+    
+    /* Display Output */
+    #display {
+        margin-top: 15px;
+        font-size: 18px;
+        color: #5a3e2b; /* Dark Brown */
+        background-color: #fff5f3; /* Light Pink */
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid #d2a679;
+        min-height: 40px;
+        width: 50%;
+        display: inline-block;
+    }
+    
+    /* Buttons */
+    .buttons {
+        margin-top: 15px;
+    }
+    
+    button {
+        background-color: #d2a679; /* Light Brown */
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 16px;
+        border-radius: 8px;
+        margin: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+        font-family: 'Dancing Script', cursive; /* Romantic cursive font */
+    }
+    
+    button:hover {
+        background-color: #b8865b; /* Darker Brown */
+        transform: scale(1.05);
+    }
+    
+    /* Adding Decorative Elements */
+    h1 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 32px;
+        color: #d2a679;
+        margin-bottom: 10px;
+    }
+    
+    .decorative-image {
+        width: 120px;
+        height: auto;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+</style>
+    
+</head>
+<body>
+    
+    <input type="text" id="number">
+    <button type="button" onclick="sum()">Show sum</button>
+    <button type="button" onclick="factorial()">Show factorial</button>
+    <button type="button" onclick="odd()">Show odd</button>
+    <button type="button" onclick="even()">Show even</button>
+    <p id="display"> </p>
+    
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form styling */
+#employee-form {
+    background: #ffb6c1; /* Soft pink background */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+#employee-form h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#employee-form label {
+    color: #ffffff;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+#employee-form input {
+    width: 90%;
+    padding: 10px;
+    border: 2px solid #ffccd5;
+    border-radius: 10px;
+    margin-top: 5px;
+    outline: none;
+    background-color: #fff0f4;
+}
+
+#employee-form button {
+    background-color: #ff69b4; /* Hot pink */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+#employee-form button:hover {
+    background-color: #ff1493; /* Deeper pink on hover */
+}
+
+/* Employee list styling */
+h2 {
+    color: #d6336c;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#employee {
+    border-collapse: collapse;
+    width: 80%;
+    background-color: #fff0f4;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#employee thead {
+    background-color: #ff69b4;
+    color: white;
+}
+
+#employee thead td {
+    padding: 12px 15px;
+    font-weight: bold;
+}
+
+#employee tbody tr:nth-child(even) {
+    background-color: #ffe4ec;
+}
+
+#employee tbody tr:hover {
+    background-color: #ffc1d6;
+}
+
+#employee tbody td {
+    padding: 10px 15px;
+    text-align: center;
+    color: #333;
+    border-bottom: 1px solid #ffccd5;
+}
+
+button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #ff1493;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #employee-form, #employee {
+        width: 90%;
+    }
+}

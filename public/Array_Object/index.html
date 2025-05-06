@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <script>
+        //global variable
+        let names = ["andrea", "jhoowannna","cath", "jade"];
+        
+        let employees=[
+        {
+            "emp_id": "123",
+            "name": "jhoowannna",
+            "position": "CEO"
+        },
+        {
+            "emp_id": "344",
+            "name": "jadeh",
+            "position": "janitress"
+        }
+        ]
+    </script>
+    <link rel="stylesheet" href="css/array.css">
+    <script src="./js/array.js"></script>
+    <script src="./js/object.js"></script>
+</head>
+<body>
+    <div id="employee-form">
+        <h2>Add New Employee</h2>
+        <label for="id_emp">ID</label>
+        <input type="text" id="id_emp" placeholder="Enter Employee ID">
+        <br>
+        
+        <label for="name">NAME</label>
+        <input type="text" id="name" placeholder="Enter Name">
+        <br>
+        
+        <label for="position">POSITION</label>
+        <input type="text" id="position" placeholder="Enter Position">
+        <br>
+        
+        <button type="button" onclick="addEmployee()">Add</button>
+
+    </div>
+
+    <p id="list"></p>
+
+    <div>
+        <h2>Employee List</h2>
+        <button type="button" onclick="showEmployees()">SHOW EMPLOYEES</button>
+        <table id="employee">
+        <thead>
+            <tr>
+                <td>EMPLOYEE ID</td>
+                <td>NAME</td>
+                <td>POSITION</td>
+            </tr>
+            <tbody id="employee-body">
+                <tr>
+                <td>123</td>
+                <td>jhoowannna</td>
+                <td>CEO</td>
+            </tr>
+            <tr>
+                <td>344</td>
+                <td>jadeh</td>
+                <td>janitress</td>
+            </tr>
+            </tbody>
+        </thead>
+    </table>
+    </div>
+</body>
+</html>
