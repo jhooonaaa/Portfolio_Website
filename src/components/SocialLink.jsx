@@ -2,7 +2,7 @@ import { FaGithub, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 function SocialLink() {
   return (
-    <section className="relative flex flex-col items-center justify-center text-center bg-gradient-to-r from-orange-100 via-white to-orange-50 p-10 rounded-xl shadow-md min-h-screen overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center text-center bg-gradient-to-r from-orange-100 via-white to-orange-50 p-10 border-4 border-[#f5cbb4] rounded-xl shadow-md min-h-screen overflow-hidden">
 
       {/* Decorative Background Lines */}
       <div className="absolute inset-0 bg-[radial-gradient(#f4dec2_1px,transparent_1px)] bg-[length:20px_20px] opacity-20 pointer-events-none z-0" />

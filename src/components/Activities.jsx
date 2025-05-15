@@ -1,50 +1,54 @@
 function Activities() {
-  const projects = [
+  const activityList = [
     {
       title: "To-Do List",
       image: "/todo.png",
       link: "https://to-do-client-efjy.vercel.app/",
+      description: "A task manager app with login and CRUD features for organizing daily tasks efficiently.",
     },
     {
-      title: "Array_Object",
+      title: "Array & Object Exercise",
       image: "/Array.png",
       link: "/Array_Object/index.html",
+      description: "An interactive activity to demonstrate the use of JavaScript arrays and objects.",
     },
     {
-      title: "Calculator",
+      title: "Simple Calculator",
       image: "/calcu.png",
       link: "/calculator/index.html",
+      description: "A basic calculator built using HTML, CSS, and JavaScript with two display screens.",
     },
     {
-      title: "Loop",
+      title: "Loop Exercises",
       image: "/loop.png",
       link: "/loop/index.html",
+      description: "Fun and engaging loop practice activities using JavaScript for beginners.",
     },
   ];
 
   return (
-    <section className="p-6 bg-gradient-to-r from-[#f5f0ea] via-[#fbe9d7] to-[#f4dec2] min-h-screen rounded-xl shadow-md">
-      <h2 className="text-3xl font-extrabold text-center text-[#5d3a00] mb-6">
+    <section className="min-h-screen bg-gradient-to-r from-[#f5f0ea] via-[#fbe9d7] to-[#f4dec2] px-6 py-10 border-4 border-[#f5cbb4] rounded-2xl shadow-xl">
+      <h2 className="text-4xl font-bold text-center text-[#5d3a00] mb-10">
         My Activities & Projects
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {projects.map((project, index) => (
+
+      <div className="flex flex-wrap justify-center gap-8">
+        {activityList.map((item, idx) => (
           <a
-            key={index}
-            href={project.link}
+            key={idx}
+            href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group block rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden bg-white"
+            className="transform hover:scale-105 active:scale-95 transition-all duration-300 ease-in-out w-full sm:w-[300px] bg-white rounded-xl shadow-md hover:shadow-lg"
           >
             <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+              src={item.image}
+              alt={item.title}
+              className="w-full h-40 object-cover rounded-t-xl"
             />
             <div className="p-4">
-              <h3 className="text-lg font-semibold text-gray-800">
-                {project.title}
-              </h3>
+              <h3 className="text-xl font-semibold text-[#4b2c00] mb-2">{item.title}</h3>
+              <p className="text-sm text-gray-600">{item.description}</p>
             </div>
           </a>
         ))}

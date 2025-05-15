@@ -6,7 +6,6 @@ import SocialLink from './components/SocialLink';
 
 function App() {
   const [showMainContent, setShowMainContent] = useState(false);
-
   const aboutRef = useRef(null);
   const activitiesRef = useRef(null);
   const socialRef = useRef(null);
@@ -17,6 +16,51 @@ function App() {
     }
   };
 
+  const Navbar = () => (
+  <nav className="w-full bg-[#f5cbb4] px-3 py-2 shadow-md fixed top-0 left-0 z-50 flex justify-between items-center">
+    <img
+      src="/bg.jpg"
+      alt="Avatar"
+      className="w-10 h-10 sm:w-10 sm:h-10 rounded-full object-cover border-2 border-white shadow"
+    />
+    <ul className="flex gap-2 sm:gap-4 text-xs sm:text-sm font-medium text-gray-700">
+      <li>
+        <button
+          onClick={() => setShowMainContent(false)}
+          className="hover:text-[#CB997E] transition"
+        >
+          Home
+        </button>
+      </li>
+      <li>
+        <button
+          onClick={() => scrollToRef(aboutRef)}
+          className="hover:text-[#CB997E] transition"
+        >
+          About
+        </button>
+      </li>
+      <li>
+        <button
+          onClick={() => scrollToRef(activitiesRef)}
+          className="hover:text-[#CB997E] transition"
+        >
+          Activities
+        </button>
+      </li>
+      <li>
+        <button
+          onClick={() => scrollToRef(socialRef)}
+          className="hover:text-[#CB997E] transition"
+        >
+          Social
+        </button>
+      </li>
+    </ul>
+  </nav>
+);
+
+
   if (!showMainContent) {
     return <FrontPage onEnter={() => {
       setShowMainContent(true);
@@ -25,56 +69,14 @@ function App() {
   }
 
   return (
-    <div className="flex min-h-screen">
-      
-      {/* Sidebar */}
-      <div className="fixed inset-y-0 left-0 bg-[#f5cbb4] p-6 shadow-lg rounded-r-xl 
-                      w-40 md:w-56 lg:w-64 flex flex-col">
-        <div className="mb-10">
-          <h2 className="text-2xl font-bold text-gray-700">My Portfolio</h2>
-        </div>
-        <ul className="space-y-4 text-base font-medium text-gray-700">
-          <li>
-            <button
-              onClick={() => setShowMainContent(false)}
-              className="w-full text-left px-3 py-2 rounded-lg hover:bg-white hover:text-[#CB997E] transition"
-            >
-              Home
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => scrollToRef(aboutRef)}
-              className="w-full text-left px-3 py-2 rounded-lg hover:bg-white hover:text-[#CB997E] transition"
-            >
-              About
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => scrollToRef(activitiesRef)}
-              className="w-full text-left px-3 py-2 rounded-lg hover:bg-white hover:text-[#CB997E] transition"
-            >
-              Activities
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => scrollToRef(socialRef)}
-              className="w-full text-left px-3 py-2 rounded-lg hover:bg-white hover:text-[#CB997E] transition"
-            >
-              Social Link
-            </button>
-          </li>
-        </ul>
-      </div>
+    <div className="min-h-screen bg-white">
+      <Navbar />
+      <main className="pt-20 px-4 sm:px-6 lg:px-8 space-y-10">
+  <section ref={aboutRef} className="scroll-mt-20"><About /></section>
+  <section ref={activitiesRef} className="scroll-mt-20"><Activities /></section>
+  <section ref={socialRef} className="scroll-mt-20"><SocialLink /></section>
+</main>
 
-      {/* Main Content */}
-      <main className="flex-1 overflow-y-auto scroll-smooth p-6 ml-40 md:ml-56 lg:ml-64">
-        <div ref={aboutRef}><About /></div>
-        <div ref={activitiesRef}><Activities /></div>
-        <div ref={socialRef}><SocialLink /></div>
-      </main>
     </div>
   );
 }
