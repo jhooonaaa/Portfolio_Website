@@ -19,6 +19,12 @@ function Activities() {
       description: "A basic calculator built using HTML, CSS, and JavaScript with two display screens.",
     },
     {
+      title: "Crypto Converter",
+      image: "/converter.png",
+      link: "/converter-activity/index.html",
+      description: "crypto converter that allows users to input an amount in PHP (Philippine Peso) and convert it into various cryptocurrencies such as XRP, USDT, DOGE, and TRX.",
+    },
+    {
       title: "Loop Exercises",
       image: "/loop.png",
       link: "/loop/index.html",
