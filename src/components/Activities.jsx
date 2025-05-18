@@ -22,7 +22,7 @@ function Activities() {
       title: "Crypto Converter",
       image: "/converter.png",
       link: "/converter-activity/index.html",
-      description: "crypto converter that allows users to input an amount in PHP (Philippine Peso) and convert it into various cryptocurrencies such as XRP, USDT, DOGE, and TRX.",
+      description: "Crypto converter that allows users to input an amount in PHP and convert it into various cryptocurrencies like XRP, USDT, DOGE, and TRX.",
     },
     {
       title: "Loop Exercises",
@@ -32,13 +32,33 @@ function Activities() {
     },
   ];
 
+ const certificateList = [
+  {
+    title: "Data Science",
+    image: "/DATA.png",
+    link: "/data.pdf",
+  },
+  {
+    title: "Modern AI",
+    image: "/AI.png",
+    link: "/ai.pdf",
+  },
+  {
+    title: "JavaScript",
+    image: "/JAVA.png",
+    link: "/java.pdf",
+  },
+];
+
+
   return (
     <section className="min-h-screen bg-gradient-to-r from-[#f5f0ea] via-[#fbe9d7] to-[#f4dec2] px-6 py-10 border-4 border-[#f5cbb4] rounded-2xl shadow-xl">
+      {/* Activities & Projects Section */}
       <h2 className="text-4xl font-bold text-center text-[#5d3a00] mb-10">
-        My Activities & Projects
+        ACTIVITIES AND PROJECTS
       </h2>
 
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="flex flex-wrap justify-center gap-8 mb-16">
         {activityList.map((item, idx) => (
           <a
             key={idx}
@@ -59,6 +79,34 @@ function Activities() {
           </a>
         ))}
       </div>
+
+     {/* Certificate Section */}
+<h2 className="text-3xl font-bold text-center text-[#5d3a00] mb-2">
+  CERTIFICATE
+</h2>
+<h3 className="text-lg text-center text-[#5d3a00] mb-8">
+  Certificate of completion awarded for successfully finishing a course or project.
+</h3>
+
+<div className="flex flex-wrap justify-center gap-8">
+  {certificateList.map((cert, idx) => (
+    <a
+      key={idx}
+      href={cert.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="transform hover:scale-105 active:scale-95 transition-all duration-300 ease-in-out w-full sm:w-[300px] bg-white rounded-xl shadow-md hover:shadow-lg"
+    >
+      <img
+        src={cert.image}
+        alt={cert.title}
+        className="w-full h-40 object-cover rounded-xl"
+      />
+    </a>
+  ))}
+</div>
+
+
     </section>
   );
 }
