@@ -3,12 +3,16 @@ import FrontPage from './components/FrontPage';
 import About from './components/About';
 import Activities from './components/Activities';
 import SocialLink from './components/SocialLink';
+import Portfolio from './components/Portfolio';
+
 
 function App() {
   const [showMainContent, setShowMainContent] = useState(false);
   const aboutRef = useRef(null);
   const activitiesRef = useRef(null);
   const socialRef = useRef(null);
+  const portfolioRef = useRef(null);
+
 
   const scrollToRef = (ref) => {
     if (ref.current) {
@@ -56,6 +60,14 @@ function App() {
           Social
         </button>
       </li>
+      <li>
+  <button
+    onClick={() => scrollToRef(portfolioRef)}
+    className="hover:text-[#CB997E] transition"
+  >
+    Portfolio
+  </button>
+</li>
     </ul>
   </nav>
 );
@@ -72,10 +84,23 @@ function App() {
     <div className="min-h-screen bg-white">
       <Navbar />
       <main className="pt-20 px-4 sm:px-6 lg:px-8 space-y-10">
-  <section ref={aboutRef} className="scroll-mt-20"><About /></section>
-  <section ref={activitiesRef} className="scroll-mt-20"><Activities /></section>
-  <section ref={socialRef} className="scroll-mt-20"><SocialLink /></section>
+  <section ref={aboutRef} className="scroll-mt-20">
+    <About />
+  </section>
+
+  <section ref={activitiesRef} className="scroll-mt-20">
+    <Activities />
+  </section>
+
+  <section ref={portfolioRef} className="scroll-mt-20">
+    <Portfolio />
+  </section>
+
+  <section ref={socialRef} className="scroll-mt-20">
+    <SocialLink />
+  </section>
 </main>
+
 
     </div>
   );

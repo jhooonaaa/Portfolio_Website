@@ -7,7 +7,7 @@ function FrontPage({ onEnter }) {
       >
         <div className="absolute inset-0 rounded-full" />
         <img
-          src="/1.jpg"
+          src="/bg.jpg"
           alt="Profile"
           className="w-full h-full object-cover rounded-full"
         />

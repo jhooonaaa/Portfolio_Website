@@ -32,23 +32,7 @@ function Activities() {
     },
   ];
 
- const certificateList = [
-  {
-    title: "Data Science",
-    image: "/DATA.png",
-    link: "/data.pdf",
-  },
-  {
-    title: "Modern AI",
-    image: "/AI.png",
-    link: "/ai.pdf",
-  },
-  {
-    title: "JavaScript",
-    image: "/JAVA.png",
-    link: "/java.pdf",
-  },
-];
+ 
 
 
   return (
@@ -79,33 +63,6 @@ function Activities() {
           </a>
         ))}
       </div>
-
-     {/* Certificate Section */}
-<h2 className="text-3xl font-bold text-center text-[#5d3a00] mb-2">
-  CERTIFICATE
-</h2>
-<h3 className="text-lg text-center text-[#5d3a00] mb-8">
-  Certificate of completion awarded for successfully finishing a course or project.
-</h3>
-
-<div className="flex flex-wrap justify-center gap-8">
-  {certificateList.map((cert, idx) => (
-    <a
-      key={idx}
-      href={cert.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="transform hover:scale-105 active:scale-95 transition-all duration-300 ease-in-out w-full sm:w-[300px] bg-white rounded-xl shadow-md hover:shadow-lg"
-    >
-      <img
-        src={cert.image}
-        alt={cert.title}
-        className="w-full h-40 object-cover rounded-xl"
-      />
-    </a>
-  ))}
-</div>
-
 
     </section>
   );
