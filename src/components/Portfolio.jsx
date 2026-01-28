@@ -171,18 +171,13 @@ const ciscoCertificates = [
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="p-5 border rounded-lg">
-              <h4 className="font-semibold">Web Development Trends</h4>
+              <h4 className="font-semibold">none</h4>
               <p className="text-sm text-gray-600 mt-2">
-                Participated in a webinar discussing modern web development tools and practices.
+                none
               </p>
             </div>
 
-            <div className="p-5 border rounded-lg">
-              <h4 className="font-semibold">AI in Education</h4>
-              <p className="text-sm text-gray-600 mt-2">
-                Attended a webinar focused on how AI is transforming learning environments.
-              </p>
-            </div>
+          
           </div>
         </div>
       )}
