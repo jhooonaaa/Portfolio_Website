@@ -3,7 +3,21 @@ import { FaArrowLeft } from "react-icons/fa";
 
 function Portfolio() {
   const [view, setView] = useState("menu"); 
-  // menu | cisco | webinar
+  const [selectedImage, setSelectedImage] = useState(null);
+
+const webinars = [
+  {
+    title: "Digital Safety",
+    image: "/web1.png",
+    description: "Cybersecurity and Introduction to Philippine National Public Key Infrastructure (PNPKI).",
+  },
+  {
+    title: "Work Smarter, Not Harder: Optimiz Work with AI",
+    image: "/webinar2.jpg",
+    description: "WEB2.",
+  },
+];
+
 
 const ciscoCertificates = [
   {
@@ -163,24 +177,66 @@ const ciscoCertificates = [
 
 
       {/* WEBINAR VIEW */}
-      {view === "webinar" && (
-        <div className="max-w-4xl mx-auto bg-white p-8 rounded-xl shadow-md">
-          <h3 className="text-2xl font-semibold text-[#9c6b30] mb-6">
-            Webinar
-          </h3>
+{view === "webinar" && (
+  <div className="max-w-6xl mx-auto bg-white p-8 rounded-xl shadow-md">
+    <h3 className="text-2xl font-semibold text-[#9c6b30] mb-6">
+      Webinar
+    </h3>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="p-5 border rounded-lg">
-              <h4 className="font-semibold">none</h4>
-              <p className="text-sm text-gray-600 mt-2">
-                none
-              </p>
-            </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      {webinars.map((webinar, index) => (
+        <div
+          key={index}
+          className="border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition"
+        >
+          <img
+            src={webinar.image}
+            alt={webinar.title}
+            className="w-full h-40 object-cover"
+          />
 
-          
+          <div className="p-5">
+            <h4 className="font-semibold text-lg">
+              {webinar.title}
+            </h4>
+
+            <p className="text-sm text-gray-600 mt-2">
+              {webinar.description}
+            </p>
+
+            <button
+              onClick={() => setSelectedImage(webinar.image)}
+              className="inline-block mt-4 px-4 py-2 text-sm font-semibold text-white bg-[#9c6b30] rounded-lg hover:bg-[#7a5324] transition"
+            >
+              View Image
+            </button>
           </div>
         </div>
-      )}
+      ))}
+    </div>
+  </div>
+)}
+
+{/* IMAGE MODAL */}
+{selectedImage && (
+  <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+    <div className="relative bg-white p-4 rounded-xl shadow-lg max-w-3xl w-full mx-4">
+      <button
+        onClick={() => setSelectedImage(null)}
+        className="absolute top-2 right-2 text-gray-600 hover:text-black text-xl"
+      >
+        ✕
+      </button>
+
+      <img
+        src={selectedImage}
+        alt="Webinar"
+        className="w-full h-auto rounded-lg"
+      />
+    </div>
+  </div>
+)}
+
 
     </section>
   );
