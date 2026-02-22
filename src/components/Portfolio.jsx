@@ -42,6 +42,11 @@ const ciscoCertificates = [
     link: "/Update_Your_Resume.pdf",
   },
   {
+    title: "Data Analytics Essential",
+        image: "/data-anaysis.png",
+        link: "/data_analysis.pdf",
+  },
+  {
     title: "Data Science",
     image: "/DATA.png",
     link: "/data.pdf",
@@ -52,15 +57,11 @@ const ciscoCertificates = [
     link: "/ai.pdf",
   },
   {
-     title: "JavaScript",
+     title: "JavaScript Essential1",
     image: "/JAVA.png",
     link: "/java.pdf",
   },
-  {
-    title: "JavaScript",
-        image: "/JAVA.png",
-        link: "/java.pdf",
-  },
+  
 ];
 
 
