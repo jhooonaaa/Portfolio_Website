@@ -11,11 +11,7 @@ const webinars = [
     image: "/web1.png",
     description: "Cybersecurity and Introduction to Philippine National Public Key Infrastructure (PNPKI).",
   },
-  {
-    title: "Work Smarter, Not Harder: Optimiz Work with AI",
-    image: "/webinar2.jpg",
-    description: "WEB2.",
-  },
+  
 ];
 
 
