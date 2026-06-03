@@ -26,10 +26,15 @@ function About() {
           About Me
         </h2>
         <p className="mt-4 text-gray-700 text-base sm:text-lg leading-relaxed">
-         Hi! I'm Jhona Mae Artienda, a 4th-year BSIT student at the University of Abra. I am detail-oriented, curious, and always aiming to improve the quality of my projects. 
-         I enjoy creating clean and responsive layouts, exploring UI/UX trends, and learning new tools that help me enhance my work. 
-         My design approach is minimal, clean, and user-centered, ensuring that every project I create is both functional and visually engaging. 
-         I’m also open-minded and always willing to learn new things that can help me grow as a developer and designer.
+        Hi! I'm Jhona Mae Artienda, a Bachelor of Science in Information Technology graduate with a
+         passion for web development and creating user-friendly digital experiences. I am detail-oriented,
+          curious, and committed to continuously improving my skills and the quality of my work.
+           I enjoy building clean, responsive websites, exploring modern UI/UX trends, 
+           and learning new technologies that enhance both functionality and design.
+            My approach focuses on creating solutions that are simple, effective, and user-centered. 
+            As an aspiring IT professional, I am eager to apply my knowledge, gain valuable experience, 
+            and contribute to meaningful projects while continuing to grow in the field of technology.
+
         </p>
       </div>
     </section>

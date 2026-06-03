@@ -60,14 +60,7 @@ function App() {
           Social
         </button>
       </li>
-      <li>
-  <button
-    onClick={() => scrollToRef(portfolioRef)}
-    className="hover:text-[#CB997E] transition"
-  >
-    Portfolio
-  </button>
-</li>
+     
     </ul>
   </nav>
 );
